@@ -35,20 +35,47 @@ Cascade Control은 **각 단계마다 별도의 제어 루프를 적용**하여 
 
 ---
 
-## 🛠️ 하드웨어 구성
-로봇팔 제어기를 구현하기 위해 **ATmega128** 기반의 **커스텀 PCB 보드**를 제작하여 사용하였습니다.  
-이 보드는 **DC 모터 드라이버, 엔코더 입력, 전류 센서 및 전력 공급 회로**를 포함하고 있습니다.
+## 🖥️ 시뮬레이션 환경
+본 프로젝트에서는 실제 하드웨어 실험을 수행하기 전에 **MATLAB 기반 시뮬레이션 환경을 구축**하여 제어 알고리즘을 테스트하였습니다.
 
-### 📸 **하드웨어 회로 및 PCB 사진**
-**제어 블록 다이어그램**  
-![Control Block Diagram](./images/control_block_diagram.png)
+### 📸 **시뮬레이션 화면**
+![Simulation Environment](./images/simulresult.jpg)
 
-**모터 드라이버 및 전류 센서 인터페이스**  
-![Motor Control Board](./images/motor_control_board.jpg)
-
-**모터와 연결된 테스트 환경**  
-![Motor Testing](./images/motor_testing.jpg)
+### 📊 **시뮬레이션 결과**
+아래는 위치, 속도, 토크 제어 결과를 시각화한 그래프입니다.
+![Simulation Results](./images/simulresult.jpg)
 
 ---
 
+## 🛠️ 하드웨어 실험
+로봇팔의 모터 제어를 실험하기 위해 **ATmega128 기반의 커스텀 PCB 보드**를 제작하였으며, 실제 하드웨어에서의 응답성을 검증하였습니다.
+
+### 📸 **실제 실험 장치**
+![Hardware Experiment](./images/target400.jpg)
+
+### 📊 **실험 결과 그래프**
+하드웨어 테스트에서 얻은 위치, 속도, 토크 응답 그래프입니다.
+![Experiment Graph](./images/target400graph.jpg)
+
+---
+
+## 🖥️ UI 인터페이스
+로봇팔을 실시간으로 제어하고 데이터 시각화를 수행하기 위한 **GUI 프로그램**을 개발하였습니다.
+
+### 📸 **GUI 프로그램 화면**
+![Robot Control UI](./images/ui.jpg)
+
+GUI를 통해 **목표 위치를 설정하고, 속도 및 토크를 조정할 수 있으며, 실시간 데이터 모니터링이 가능합니다**.
+
+---
+
+## 📌 결론 및 향후 계획
+- **Cascade Control을 활용한 로봇팔 제어의 성능을 성공적으로 검증**
+- **MATLAB 시뮬레이션과 실제 하드웨어 실험을 병행하여 알고리즘 최적화**
+- 향후 **더 정밀한 제어기 (예: LQR, Adaptive Control) 추가 개발 예정**
+
+---
+
+## 📩 문의
+프로젝트에 대한 문의 사항은 [이메일](mailto:wkrldowk1@gmail.com)로 연락 주세요! 😊
 
